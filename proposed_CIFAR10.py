@@ -87,10 +87,10 @@ def _dataset(img_path):
         normalize
     ])
     dset_database = torchvision.datasets.CIFAR10(\
-    img_path, train=True,transform =transformations,download=False)
+    img_path, train=True,transform =transformations,download=True)
 
     dset_test = torchvision.datasets.CIFAR10(\
-    img_path, train=False,transform =transformations,download=False)
+    img_path, train=False,transform =transformations,download=True)
 
     num_database, num_test = len(dset_database.data), len(dset_test.data)
 
